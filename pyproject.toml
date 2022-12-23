@@ -8,9 +8,15 @@ license = "AGPL-3.0-only"
 [tool.poetry.dependencies]
 python = "^3.11"
 Django = "3.2"
+django-encrypted-secrets = "^0.9.9"
 
 [tool.poetry.dev-dependencies]
 black = "22.12.0"
+isort = "^5.11.4"
+wemake-python-styleguide = "^0.17.0"
+
+[tool.isort]
+profile = "black"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

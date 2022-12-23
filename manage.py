@@ -2,10 +2,16 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import encrypted_secrets
 
 
 def main():
     """Run administrative tasks."""
+    try:
+        encrypted_secrets.load_secrets()
+    except encrypted_secrets.YAMLFormatException:
+        print("\n\n\nMALFORMED YAML IN ENCRYPTED SECRETS\n\n\n")
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'callsign_alert.settings')
     try:
         from django.core.management import execute_from_command_line
