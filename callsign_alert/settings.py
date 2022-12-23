@@ -27,7 +27,7 @@ SECRET_KEY = encrypted_secrets.get_secret('secret_key')
 ENV = os.environ.get('ENV', "development").lower()
 DEBUG = ENV != 'production'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"] # TODO fix this
 
 
 # Application definition
