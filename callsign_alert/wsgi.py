@@ -12,8 +12,8 @@ import os
 from django.core.wsgi import get_wsgi_application
 import encrypted_secrets
 
-if __name__ == "__main__":
-    encrypted_secrets.load_secrets()
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "callsign_alert.settings")
 
-    application = get_wsgi_application()
+encrypted_secrets.load_secrets()
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "callsign_alert.settings")
+
+application = get_wsgi_application()

@@ -1,5 +1,5 @@
 from django.http import HttpResponse
 
 
-def indexPageView(request):
+def indexPageView(_request):
     return HttpResponse("Hello World!")

@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = encrypted_secrets.get_secret('secret_key')
 
-ENV = os.environ.getenv('ENV', "development").lower()
+ENV = os.environ.get('ENV', "development").lower()
 DEBUG = ENV != 'production'
 
 ALLOWED_HOSTS = []
