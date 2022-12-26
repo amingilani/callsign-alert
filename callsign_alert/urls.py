@@ -16,9 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from callsign_alert.app.views import home_page
-
-# raise Exception(vars(views))
+from core.views import home_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
