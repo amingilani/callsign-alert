@@ -2,12 +2,12 @@
 Common settings shared between all environments
 """
 
-from pathlib import Path
+import pathlib
 import encrypted_secrets
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = pathlib.Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
