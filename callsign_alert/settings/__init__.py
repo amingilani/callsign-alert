@@ -2,7 +2,7 @@ import os
 
 ENV = os.environ.get('ENV', "development").lower()
 
-from .common import *  # noqa
+from ._shared import *  # noqa
 
 if ENV == 'production':
     from .production import *  # noqa

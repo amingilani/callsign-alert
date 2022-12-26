@@ -1,3 +1,7 @@
+"""
+Settings for production environment only
+"""
+
 import os
 import encrypted_secrets
 import urllib.parse
